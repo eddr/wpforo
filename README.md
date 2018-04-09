@@ -7,6 +7,7 @@ counts images in topics, has documentation beyond the yoast documentation and al
 
 How to include:
 add the following code in your plugin or functions.php - this adds our custom WPForo sitemap provider. Remember to have put the right path to the wpforo_smp.php file
+```php
 function add_external_sitemaps_providers($providers) {
 	
 	require_once('wpforo_smp.php'); // change path if needed
@@ -15,3 +16,4 @@ function add_external_sitemaps_providers($providers) {
 	return $providers;
 }
 add_filter('wpseo_sitemaps_providers', 'add_external_sitemaps_providers', 10, 1);
+```
